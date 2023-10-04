@@ -12,6 +12,7 @@ Auto ssh login with bitwarden saved password &amp; totp pin
 2. Bitwarden session will be expired after current terminal session ended or any new `bw unlock` execution
 
 # Requirements
+Tip: It is easy to install them through `brew` for macos.
 1. `bw` of https://github.com/bitwarden/cli
 2. `expect` of https://core.tcl-lang.org/expect/index
 3. `oathtool` of https://www.nongnu.org/oath-toolkit/

@@ -21,7 +21,7 @@ Tip: It is easy to install them through `brew` for macos.
 # Installation
 ## Download
 ```shell
-git clone https://github.com/lessmind/bitwarden-ssh-auto-login.git
+git clone https://github.com/fregataa/bitwarden-ssh-auto-login.git
 cd ~/bin/ # or any other dir in $PATH
 ln -s /path/to/bitwarden-ssh-auto-login/bwssh
 ```

@@ -31,6 +31,8 @@ Add alias in .bashrc or other equivalent files
 ```shell
 alias ssh='. bwssh ssh'
 alias scp='. bwssh scp'
+export BW_ID="my@email.com"
+export BW_PWD="PASSWORD"
 # or any other command requires ssh login
 ```
 use `.` for exporting `BW_SESSION` to current shell

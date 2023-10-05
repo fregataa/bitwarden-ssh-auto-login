@@ -40,9 +40,9 @@ doBwssh() {
 	objectId=$2
 
 	# ensure login
-	read_output() {
-		while read line; do
-			if [[ "$line" =~ 'BW_SESSION\=' ]]; then
+	capture_output() {
+		while IFS=\n read -r line; do
+			if [[ "$line" =~ \ BW_SESSION\= ]]; then
 				key="${line#*\"}"
 				key="${key%%\"}"
 				export BW_SESSION="$key"
@@ -54,13 +54,13 @@ doBwssh() {
 
 	login() {
 		cmd_output=$(bw login $BW_ID $BW_PWD)
-		read_output $cmd_output
+		capture_output "$cmd_output"
 		return $?
 	}
 
 	unlock() {
 		cmd_output=$(bw unlock $BW_PWD)
-		read_output $cmd_output
+		capture_output "$cmd_output"
 		return $?
 	}
 
